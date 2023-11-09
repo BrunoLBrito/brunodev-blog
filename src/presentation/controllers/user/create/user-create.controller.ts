@@ -1,8 +1,7 @@
 import { Request, Response } from 'express'
 
-// import { UserRepositoryPrisma } from '@/infra/repositories/prisma/user.resposity'
 import { UserCreateUseCase } from '@/domain/usecases/user/create/user-create.usecase'
-import { UserRepositoryInMemory } from '@/infra/repositories/in-memory/user-repository.in-memory'
+import { userRepository } from '@/presentation/controllers/user/controller'
 
 type UserRequest = {
   name: string
@@ -10,7 +9,6 @@ type UserRequest = {
   password: string
 }
 
-const userRepository = new UserRepositoryInMemory()
 const userCreateUseCase = new UserCreateUseCase(userRepository)
 
 class UserCreateController {
