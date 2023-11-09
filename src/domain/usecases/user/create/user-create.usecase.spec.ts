@@ -1,4 +1,4 @@
-import { AppError } from '@/domain/errors/AppError'
+import { AppError } from '@/domain/errors/app-error'
 import { UserCreateUseCase } from '@/domain/usecases/user/create/user-create.usecase'
 import { IUserRepository } from '@/infra/repositories/iuser.repository'
 

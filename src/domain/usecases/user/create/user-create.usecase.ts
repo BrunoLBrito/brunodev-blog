@@ -2,7 +2,7 @@ import { IUserDTO } from '@/infra/dtos/iuser.dto'
 import { IUserRepository } from '@/infra/repositories/iuser.repository'
 import { UserModel } from '@/domain/models/user.model'
 import { UserValidator } from '@/domain/validation/user.validator'
-import { AppError } from '@/domain/errors/AppError'
+import { AppError } from '@/domain/errors/app-error'
 
 class UserCreateUseCase {
   constructor(private readonly userRepository: IUserRepository) {}
